@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unidad 2</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+  <header>
+    <h1>Unidad 2 Estructura y funcionamiento del CPU</h1>
+     <div class="buttons">
+      <button onclick="window.location.href = 'Unidad 1.html';">Anterior</button>
+      <button onclick="window.location.href = 'index.html';">Inicio</button>
+        <button onclick="window.location.href = 'Unidad 3.html';">Siguiente</button>
+      </div>
+  </header>
+  <br><br><br><br>
+    <div class="index">
+      <div class="dropdown">
+        <button>Indice</button>
+        <div class="dropdown-options">
+          <a href="#2.1 Organización del procesador.">2.1 Organización del procesador.</a>
+<a href="#2.2 Estructura de registros.">2.2 Estructura de registros.</a>
+<a href="#2.2.1 Registros visibles para el usuario.">2.2.1 Registros visibles para el usuario.</a>
+<a href="#2.2.2 Registros de control y de estados.">2.2.2 Registros de control y de estados.</a>
+<a href="#2.2.3 Ejemplos de registros de CPU reales.">2.2.3 Ejemplos de registros de CPU reales.</a>
+<a href="#2.3 El ciclo de instrucción.">2.3 El ciclo de instrucción.</a>
+<a href="#2.3.1 Ciclo Fetch-Decode-Execute.">2.3.1 Ciclo Fetch-Decode-Execute.</a>
+<a href="#2.3.2 Segmentación de instrucciones.">2.3.2 Segmentación de instrucciones.</a>
+<a href="#2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.">2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.</a>
+<a href="#2.3.4 Modos de direccionamiento.">2.3.4 Modos de direccionamiento.</a>
+<a href="#2.4 Casos de estudio de CPU reales.">2.4 Casos de estudio de CPU reales.</a>
+
+      </div>
+    </div><br>
+    <div class="info">
+      <h2 class="center"id="2.1 Organización del procesador.">2.1 Organización del procesador.</h2>
+      <p>La organización del procesador se refiere a cómo están estructuradas las diversas unidades funcionales dentro de la unidad central de procesamiento (CPU) de una computadora. <br>
+      </p><br>
+      <div class="center">
+              <img src="unidad2/1.jpg">
+      </div>
+      <h2 class="center" id="2.2 Estructura de registros.">2.2 Estructura de registros.</h2>
+      <p>Registros del CPU<br>
+        Se emplean para controlar las instrucciones en ejecución, manejar direccionamiento de memoria y propiciar la capacidad aritmética.<br>
+        Los registros vienen de tres tipos: datos, direcciones e índice, que tiene lugar en casi todos los aspectos de la operación del CPU.<br>
+        El tamaño de un registro depende del CPU; los más simples tienen registros que aceptan 8 o 16 bits de datos y los más complejos tienen registros de 32, 48 o 64 bits.<br>
+      </p><br>
+      <div class="center">
+              <img src="unidad2/2.webp">
+      </div>
+      <h2 class="center" id="2.2.1 Registros visibles para el usuario.">2.2.1 Registros visibles para el usuario.</h2>
+      <p>Un registro visible al usuario es aquél que puede ser referenciado por medio del lenguaje máquina que ejecuta la CPU. Prácticamente todos los diseños contemporáneos de CPUs están provistos de varios registros visibles al usuario, en oposición a disponer de un único acumulador.<br>
+      <ul>
+      <li>Podemos clasificarlos en:<br></li>
+      <li>Uso General<br></li>
+      <li>Datos<br></li>
+      <li>Direcciones<br></li>
+      <li>Códigos de Condición<br></li>
+    </ul>
+    Los registros de uso general en un procesador pueden ser asignados por el programador para diversas funciones, incluyendo el almacenamiento de operandos para diferentes operaciones. Sin embargo, existen algunas restricciones y consideraciones a tener en cuenta:
+    Restricciones Específicas: Algunos registros pueden estar designados para operaciones específicas, como operaciones en coma flotante, lo que limita su disponibilidad para otras funciones.
+    
+    Funciones de Direccionamiento: En algunos casos, los registros de uso general pueden utilizarse para funciones de direccionamiento, mientras que en otros sistemas existe una separación clara entre registros de datos y registros de direcciones.
+    
+    Cantidad de Registros: El número de registros disponibles es una decisión de diseño importante. Mientras más registros haya, mayor será la capacidad para almacenar datos temporalmente en la CPU.
+    
+    Tamaño de los Registros: Los registros que contienen direcciones deben ser lo suficientemente grandes como para almacenar la dirección más grande posible en el sistema, mientras que los registros de datos deben ser capaces de contener valores de diferentes tipos de datos.
+    
+    Registros de Condición: Además de los registros de datos y direcciones, hay registros que contienen códigos de condición, los cuales son establecidos por el hardware de la CPU como resultado de ciertas operaciones. Estos códigos indican información sobre el resultado de la operación, como si fue positivo, negativo, nulo o si hubo desbordamiento.
+    
+    En resumen, los registros de uso general en un procesador pueden ser utilizados de diversas formas por el programador, pero existen consideraciones específicas sobre su asignación, disponibilidad y tamaño, así como también sobre la gestión de registros especializados y registros de condición.
+    </p><br>
+      <h2 class="center" id="2.2.2 Registros de control y de estados.">2.2.2 Registros de control y de estados.</h2>
+      <p>Registros de control<br>
+        
+Los registros de la CPU son componentes esenciales para controlar su funcionamiento, aunque la mayoría de ellos no son visibles para el usuario común. Algunos registros pueden ser visibles a instrucciones de máquina ejecutadas en ciertos modos, como el modo de control o el modo de sistema operativo. Aquí hay una descripción de algunos registros importantes:
+
+Contador de Programa (PC): Contiene la dirección de la próxima instrucción a ejecutar. Se actualiza después de cada instrucción o cuando hay un salto o bifurcación en el flujo del programa.
+
+Registro de Instrucción (IR): Almacena la instrucción actualmente en ejecución. Aquí se analizan el código de operación y los campos de operandos.
+
+Registro de Direcciones (MAR): Utilizado para almacenar direcciones de memoria para operaciones de lectura o escritura.
+
+Registro de Datos (MDR): Almacena los datos que se leen desde o escriben en la memoria.
+
+Estos registros son cruciales para transferir datos entre la CPU y la memoria. Los datos dentro de la CPU se procesan generalmente en la Unidad Aritmético Lógica (ALU). La ALU puede acceder directamente al registro de datos y a los registros visibles al usuario.
+
+Además de estos registros básicos, hay registros de estado que contienen información sobre el estado actual de la CPU y el resultado de operaciones previas. Estos registros también se conocen como registros de bandera o flags. Algunos ejemplos de bits de estado incluyen:
+
+Carry Flag: Indica si ha ocurrido un desbordamiento en una operación aritmética.
+Zero Flag: Se establece si el resultado de la operación más reciente fue cero.
+Interrupt Disable Flag: Controla la capacidad de procesar interrupciones.
+Decimal Flag: Permite al procesador operar en modo decimal.
+Interrupt Flag: Se establece cuando se ejecuta una instrucción de interrupción.
+Estos registros de estado son fundamentales para el control del flujo de ejecución del programa y para tomar decisiones basadas en el resultado de operaciones anteriores.<br>
+      </p><br>
+      <h2 class="center"  id="2.2.3 Ejemplos de registros de CPU reales.">2.2.3 Ejemplos de registros de CPU reales.</h2>
+      <p>Los registros de una CPU desempeñan roles específicos en la ejecución de instrucciones y la gestión del flujo de datos. Aquí hay algunos ejemplos de registros comunes:
+
+        Registro de Propósito General: Estos registros se utilizan para almacenar datos y realizar operaciones aritméticas y lógicas. Son fundamentales en la ejecución de programas. Ejemplos incluyen EAX, EBX, ECX, EDX en la arquitectura x86 y R0, R1, R2, R3 en la arquitectura ARM.
+        
+        Registro de Puntero de Pila: Este registro almacena la dirección de memoria actual del tope de la pila. Ayuda en la gestión de la pila de memoria utilizada para almacenar datos y direcciones de retorno durante las llamadas a funciones y operaciones de salto. Ejemplos son ESP (Extended Stack Pointer) en x86 y SP (Stack Pointer) en ARM.
+        
+        Registro de Contador de Programa: También conocido como PC, este registro almacena la dirección de la próxima instrucción a ejecutar en el programa. Controla el flujo de ejecución del programa. Ejemplos incluyen EIP (Extended Instruction Pointer) en x86 y PC (Program Counter) en ARM.
+        
+        Registro de Bandera/Estado: Este registro almacena información sobre el estado y los resultados de las operaciones realizadas por la CPU. Las banderas indican cosas como desbordamiento, igualdad, signo y otros indicadores de estado útiles para la ejecución de instrucciones condicionales. Ejemplos son EFLAGS (Extended Flags Register) en x86 y CPSR (Current Program Status Register) en ARM.
+        
+        Estos ejemplos representan solo una fracción de los registros utilizados en CPUs reales. Las arquitecturas de procesadores pueden variar en términos de los registros que utilizan y sus funciones específicas. Además, algunas arquitecturas pueden tener registros especializados para funciones particulares, como operaciones de coma flotante o instrucciones SIMD.
+      </p>
+      <h2 class="center"id="2.3 El ciclo de instrucción.">2.3 El ciclo de instrucción.</h2>
+      <p>Ciclos de computadora<br>
+        La ejecución de un programa en una computadora implica varias etapas: búsqueda, decodificación, ejecución y almacenamiento.
+
+Búsqueda: Consiste en obtener las instrucciones del programa o los datos necesarios desde la memoria.
+
+Decodificación: Implica traducir estas instrucciones a señales que la computadora puede entender y ejecutar.
+
+Ejecución: Es el proceso de llevar a cabo los comandos especificados por las instrucciones.
+
+Almacenamiento: Significa escribir los resultados de las operaciones de vuelta en la memoria.
+
+En algunos sistemas, el procesador ejecuta estas etapas secuencialmente, completando una instrucción antes de pasar a la siguiente. Este enfoque se conoce como ejecución no pipelined. Sin embargo, en la mayoría de las computadoras modernas, se emplea un concepto llamado pipelining.
+
+El pipelining permite al procesador iniciar la búsqueda de una segunda instrucción antes de que se haya completado el ciclo de la computadora de la primera instrucción. Esto significa que mientras una instrucción está siendo ejecutada, el procesador ya está buscando la siguiente, lo que aumenta la eficiencia y la velocidad de procesamiento. Los procesadores con pipelining activado pueden realizar tareas de manera más rápida, ya que no necesitan esperar a que una instrucción termine completamente antes de iniciar la siguiente.<br>
+      </p><br>
+<br>
+<div class="center">
+              <img src="unidad2/3.webp">
+      </div>
+      <h2  class="center"id="2.3.1 Ciclo Fetch-Decode-Execute.">2.3.1 Ciclo Fetch-Decode-Execute.</h2>
+      <p>El proceso de ejecución de un programa en una computadora está dirigido por el CPU, que sigue un ciclo llamado Fetch Decode Execute. Este ciclo consta de varias etapas que son fundamentales para el funcionamiento de la computadora.
+
+        Traer la instrucción: La CPU obtiene la próxima instrucción desde la memoria principal y la almacena en un registro especializado para instrucciones.
+        
+        Decodificar la instrucción: La CPU analiza la instrucción para identificar qué operación debe realizar y dónde se encuentran los datos necesarios para llevarla a cabo, ya sea en memoria, registros o directamente en la instrucción misma.
+        
+        Carga de Parámetros: Se accede a los datos necesarios para la ejecución de la instrucción, ya sea leyéndolos desde la memoria principal o desde registros internos de la CPU.
+        
+        Ejecutar: La CPU lleva a cabo la operación especificada por la instrucción, como realizar una suma, resta, almacenamiento de datos, entre otras posibles tareas.
+        
+        Almacenar: Se guarda el resultado de la ejecución de la instrucción, como el resultado de una operación matemática o algún valor de retorno importante.
+        
+        Actualizar PC: Se actualiza el Program Counter (contador de programa), que contiene la dirección de memoria de la siguiente instrucción a ejecutar.
+        
+        Estas etapas se repiten constantemente mientras la computadora está en funcionamiento, formando así un ciclo continuo de Fetch Decode Execute.
+        
+        Es importante tener en cuenta que este ciclo básico ha evolucionado significativamente con el tiempo para adaptarse a las necesidades de los sistemas computacionales modernos. Con la introducción de la multitarea y técnicas avanzadas de optimización de rendimiento, como la concurrencia y el paralelismo, los procesadores actuales han mejorado considerablemente su eficiencia y velocidad de ejecución. Aunque el ciclo básico sigue siendo fundamental, se han realizado modificaciones para hacerlo más eficiente y compatible con las demandas actuales de los sistemas informáticos.
+        </p><br>
+      <div class="center">
+              <img src="unidad2/4.png">
+      </div>
+      <h2 class="center" id="2.3.2 Segmentación de instrucciones.">2.3.2 Segmentación de instrucciones.</h2>
+      <p>
+        La segmentación, también conocida como pipelining, es una técnica utilizada en sistemas electrónicos digitales, especialmente en microprocesadores, para mejorar su rendimiento. Este método se basa en la división de las tareas en etapas, de manera similar a cómo se divide un oleoducto en secciones con bombas que impulsan el fluido.
+        
+        En el contexto de la programación, la segmentación implica sincronizar y registrar los cálculos en intervalos regulares, determinados por un reloj, para reducir el tiempo de procesamiento entre dos registros críticos. Este tiempo entre registros críticos es esencialmente la frecuencia máxima de trabajo del sistema. Cuanto menor sea este tiempo, mayor será la frecuencia máxima de trabajo y viceversa.
+        
+        Al dividir equitativamente las tareas en segmentos, se puede optimizar la frecuencia de trabajo del sistema, aunque esto puede requerir más espacio de almacenamiento y resultar en un ligero retraso en la salida del resultado, equivalente al número de segmentos realizados.
+        
+        La principal ventaja del pipelining es que una vez que el canal está lleno, es decir, después de un período de latencia inicial, los resultados de cada etapa se producen de manera continua y sin retrasos adicionales en cada ciclo de reloj. Esto permite maximizar la frecuencia de trabajo del sistema.<br>
+      </p><br>
+      <div class="center">
+        <img src="unidad2/6.png">
+</div>
+      <h2 class="center" id="2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.">2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.</h2>
+      <p>
+        Un conjunto de instrucciones, también conocido como juego de instrucciones o ISA, es esencialmente un conjunto de reglas que define qué acciones puede realizar una CPU de una computadora y cómo ejecutarlas. Esto incluye las instrucciones que puede entender y ejecutar la CPU, así como otros aspectos importantes como los tipos de datos que maneja, los registros disponibles, la organización de la memoria y cómo maneja las interrupciones.
+        
+        Existen tres tipos principales de arquitecturas de conjunto de instrucciones: CISC, RISC y SISC. Cada una tiene sus propias características y enfoques para realizar operaciones. Por ejemplo, CISC se caracteriza por tener un conjunto de instrucciones complejas, mientras que RISC se enfoca en un conjunto de instrucciones reducido para maximizar la velocidad y la eficiencia. SISC, por otro lado, se centra en un conjunto de instrucciones específicas para aplicaciones especializadas.
+        
+        Es importante destacar que el conjunto de instrucciones describe los aspectos del procesador que son visibles para un programador, como las instrucciones disponibles y los registros accesibles, mientras que la microarquitectura se refiere a cómo se implementa realmente este conjunto de instrucciones a nivel de hardware. Aunque dos procesadores pueden compartir el mismo conjunto de instrucciones, como es el caso de los procesadores Intel y AMD que utilizan la arquitectura x86, sus diseños internos pueden ser muy diferentes
+      </p><br>
+      <h2 class="center" id="2.3.4 Modos de direccionamiento.">2.3.4 Modos de direccionamiento.</h2>
+      <p>Cada instrucción en un conjunto de instrucciones puede utilizar diferentes modos de direccionamiento para especificar la ubicación de los datos con los que opera. Aquí hay una explicación de cada modo de direccionamiento:
+
+        Inmediato: En este modo, el valor del operando se proporciona directamente en la instrucción misma. Por ejemplo, la instrucción ADD R1, #10 suma el valor inmediato 10 al contenido del registro R1.
+        
+        Directo: En este modo, la dirección de memoria del operando se especifica directamente en la instrucción. Por ejemplo, la instrucción LOAD R2, [100] carga el valor almacenado en la dirección de memoria 100 en el registro R2.
+        
+        Indirecto: Aquí, la dirección de memoria del operando se obtiene a través de un registro o puntero. Por ejemplo, la instrucción LOAD R3, [R2] carga el valor almacenado en la dirección de memoria apuntada por el contenido del registro R2 en el registro R3.
+        
+        Basado en Registro: En este modo, la dirección de memoria del operando se calcula sumando un desplazamiento a un registro base. Por ejemplo, la instrucción LOAD R4, [R5+10] carga el valor almacenado en la dirección de memoria calculada sumando 10 al contenido del registro R5 en el registro R4.
+        
+        Indexado: Aquí, la dirección de memoria del operando se calcula sumando un desplazamiento a un registro índice. Por ejemplo, la instrucción LOAD R6, [R7+R8] carga el valor almacenado en la dirección de memoria calculada sumando el contenido del registro R8 al contenido del registro R7 en el registro R6.
+        
+        Relativo: Este modo se utiliza para instrucciones de salto o branch. La dirección de salto se calcula sumando un desplazamiento relativo a la dirección de la siguiente instrucción. Por ejemplo, la instrucción JUMP [PC+20] realiza un salto a la dirección de memoria calculada sumando 20 al contenido del contador de programa (PC).
+      </p><br>
+        <div class="center">
+        <img src="unidad2/5.gif">
+</div>
+      <h2 class="center" id="2.4 Casos de estudio de CPU reales.">2.4 Casos de estudio de CPU reales.</h2>
+      <p>
+Los modos de direccionamiento en informática se refieren a las diferentes formas en que una instrucción en lenguaje ensamblador puede especificar la ubicación de un operando en la memoria. Cada modo de direccionamiento determina cómo se calcula la dirección de memoria efectiva del operando utilizando registros, constantes u otra información contenida en la instrucción o en otra parte.
+
+Es importante destacar que no hay una convención universal para nombrar estos modos de direccionamiento. Los nombres pueden variar según el autor o el fabricante del equipo, lo que puede llevar a confusiones. Además, lo que se considera un modo de direccionamiento en una arquitectura de computadora puede ser equivalente a la combinación de varios modos en otra arquitectura.
+
+En resumen, los modos de direccionamiento son herramientas fundamentales en la programación en lenguaje ensamblador, pero su nomenclatura y funcionalidad pueden variar entre diferentes sistemas y arquitecturas de computadoras. </p><br>
+      <div class="buttons">
+        <button onclick="window.location.href = 'Unidad 1.html';">Anterior</button>
+        <button onclick="window.location.href = 'pagina.html';">Inicio</button>
+        <button onclick="window.location.href = 'Unidad 3.html';">Siguiente</button>
+      </div>
+  </div>
+</body>
+</html>

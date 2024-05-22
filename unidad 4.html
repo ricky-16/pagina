@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unidad 4</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+  <header>
+    <h1>Unidad 4 Aspectos básicos de la computación paralela</h1>
+    <div class="buttons">
+        <button onclick="window.location.href = 'Unidad 3.html';">Anterior</button>
+        <button onclick="window.location.href = 'index.html';">Inicio</button>
+        <button onclick="window.location.href = 'Practicas.html';">Siguiente</button>
+      </div>
+    </header>
+    <br><br><br><br><br>
+  <div class="index">
+        <div class="dropdown">
+            <button>Indice</button>
+            <div class="dropdown-options">
+                <a href="#4.1 Aspectos básicos de la computación paralela.">4.1 Aspectos básicos de la computación paralela </a>
+                <a href="#4.2 Tipos de computación paralela.">4.2 Tipos de computación paralela.</a>
+                <a href="#4.2.1 Clasificacion.">4.2.1 Clasificacion.</a>
+                <a href="#4.2.2 Arquitectura de computadores secuenciales.">4.2.2 Arquitectura de computadores secuenciales.</a>
+                <a href="#4.2.3 Organización de direcciones de memoria.">4.2.3 Organización de direcciones de memoria.</a>
+                <a href="#4.3 Sistema de memoria compartida.">4.3 Sistema de memoria compartida.</a>
+                <a href="#4.3.1.1 Redes de medio compartida.">4.3.1.1 Redes de medio compartida.</a>
+                <a href="#4.3.1.2 Redes conmutadas.">4.3.1.2 Redes conmutadas.</a>
+                <a href="#4.4 Sisitemas de memoria construida.">4.4 Sisitemas de memoria construida.</a>
+                <a href="#4.5 Casos de estudio.">4.5 Casos de estudio.</a>                       
+            </div>
+    
+    </div>
+    <div class="info">
+    <h2 class='center' id="4.1 Aspectos básicos de la computación paralela.">4.1 Aspectos básicos de la computación paralela </h2>
+    <p>La computación paralela se basa en la idea de dividir un problema en tareas más pequeñas y procesarlas de manera simultánea utilizando múltiples recursos de computación. Esto permite un procesamiento más rápido y eficiente en comparación con los enfoques secuenciales tradicionales. Algunos aspectos fundamentales de la computación paralela incluyen la sincronización de tareas, la comunicación entre procesos y la gestión de recursos.</p>
+    <div class="center">
+              <img src="unidad4/1.jpg">
+      </div>
+    <h2 class='center' id="4.2 Tipos de computación paralela.">4.2 Tipos de computación paralela.</h2>
+    <p>
+        La computación paralela engloba diferentes enfoques empleados en una amplia gama de situaciones y contextos. Algunas de las técnicas más comunes incluyen el procesamiento simultáneo a niveles variados, como el nivel de bit, de instrucción, de datos y de tarea. Estas metodologías se caracterizan por la manera en que dividen y gestionan las tareas y los datos para lograr una mayor eficiencia en el procesamiento.
+    </p>
+    <div class="center">
+    <img src="unidad4/2.PNG">
+</div>
+    <h2 class='center' id="4.2.1 Clasificacion.">4.2.1 Clasificacion.</h2>
+    <p>La computación paralela se puede clasificar según cómo se fragmentan las tareas y los datos, así como la coordinación y comunicación entre los procesos simultáneos. Algunas formas habituales de clasificación abarcan la computación paralela a nivel de bit, de instrucción, de datos y de tarea.</p>
+<div class="center">
+    <img src="unidad4/3.png">
+</div>
+    <h2  class='center'id="4.2.2 Arquitectura de computadores secuenciales.">4.2.2 Arquitectura de computadores secuenciales.</h2>
+    <p>
+        La arquitectura de computadoras secuencial describe los sistemas informáticos convencionales donde las instrucciones se ejecutan de manera consecutiva, una tras otra, sin paralelismo. Este enfoque arquitectónico aún se encuentra ampliamente presente en muchas computadoras personales y estaciones de trabajo.</p>
+<div class="center">
+    <img src="unidad4/4.png">
+</div>
+    <h2 class='center' id="4.2.3 Organización de direcciones de memoria.">4.2.3 Organización de direcciones de memoria.</h2>
+    <p>La organización de direcciones de memoria se encarga de definir cómo se asignan y acceden a las direcciones de memoria en un entorno de computación paralela. Esto implica aspectos como el manejo de la memoria compartida, la distribución de la memoria y las estrategias de direccionamiento empleadas para acceder a los datos de manera simultánea.</p>
+    <div class="center">
+        <img src="unidad4/5.png">
+</div>
+    <h2 class='center' id="4.3 Sistema de memoria compartida.">4.3 Sistema de memoria compartida.</h2>
+    <p>
+        En los sistemas de memoria compartida, varios procesadores acceden y comparten una misma región de memoria. Esto facilita la comunicación y el intercambio de datos entre los procesadores de manera eficiente. Dentro de esta categoría, se distinguen dos tipos principales de redes: las redes de acceso compartido, donde múltiples procesadores comparten un único canal de comunicación, y las redes conmutadas, que utilizan un esquema de conmutación para facilitar la comunicación entre los procesadores.
+    </p>
+    <div class="center">
+        <img src="unidad4/6.webp">
+</div>
+    <h2 class='center' id="4.3.1.1 Redes de medio compartida.">4.3.1.1 Redes de medio compartida.</h2>
+    <p>
+        En las redes de medio compartido, los procesadores están conectados físicamente a un mismo canal de comunicación, ya sea un bus compartido o una red de interconexión. A través de este medio, los procesadores pueden acceder a la memoria compartida para leer y escribir datos.
+    </p>
+    <div class="center">
+        <img src="unidad4/7.png">
+</div>
+     <h2 class='center'  id="4.3.1.2 Redes conmutadas.">4.3.1.2 Redes conmutadas.</h2>
+    <p>Las redes conmutadas, por otro lado, utilizan interruptores o conmutadores para establecer conexiones entre los procesadores y la memoria compartida. Estas redes ofrecen una mayor escalabilidad y capacidad de comunicación en comparación con las redes de medio compartida.</p>
+    
+      <h2 class='center' id="4.4 Sisitemas de memoria construida.">4.4 Sisitemas de memoria construida.</h2>
+    <p>En los sistemas de memoria construida, cada procesador tiene su propia memoria local, lo que brinda una mayor autonomía a cada uno de ellos y disminuye la necesidad de acceder a una memoria compartida.</p>
+    <div class="center">
+        <img src="unidad4/8.png">
+
+</div> <h2 class='center' id="4.5 Casos de estudio.">4.5 Casos de estudio.</h2>
+    <p>En el ámbito de la computación paralela, se han llevado a cabo diversos estudios que han destacado la eficacia y las ventajas de los enfoques paralelos en diversas áreas. Algunos ejemplos incluyen la aplicación de la computación paralela en simulaciones científicas, análisis de grandes conjuntos de datos, renderizado de gráficos y modelado de sistemas complejos.</p>
+     <div class="buttons">
+        <button onclick="window.location.href = 'Unidad 3.html';">Anterior</button>
+        <button onclick="window.location.href = 'pagina.html';">Inicio</button>
+        <button onclick="window.location.href = 'Practicas.html';">Siguiente</button>
+      </div>
+    </div>
+</body>
+</html>
