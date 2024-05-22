@@ -7,10 +7,8 @@ body {
   margin: 0;
   padding: 0;
 }
-
 footer {
- 
-  background-color: #144365;
+  background-color: #00000045;
   padding: 1rem;
   text-align: center;
     color: rgb(255, 255, 255); /* Color del texto para el pie de página */
