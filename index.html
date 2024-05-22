@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>Arquitectura de computadoras</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header>
+    <h1>Arquitectura de computadoras<br>Inicio<br></h1>
+  </header>
+  <div class="container">
+    <div class="box" onclick="window.location.href = 'unidad 1.html';">
+      <img src="Inicio/unidad 1.jpg" alt="Imagen 1">
+      <div class="content">
+        <p>Unidad 1</p>
+      </div>
+    </div>
+    <div class="box" onclick="window.location.href = 'Unidad 2.html';">
+      <img src="Inicio/unidad 2.jpg" alt="Imagen 2">
+      <div class="content">
+        <p>Unidad 2</p>
+      </div>
+    </div>
+    <div class="box" onclick="window.location.href = 'Unidad 3.html';">
+      <img src="Inicio/unidad 3.webp" alt="Imagen 3">
+      <div class="content">
+        <p>Unidad 3</p>
+      </div>
+    </div>
+    <div class="box" onclick="window.location.href = 'Unidad 4.html';">
+      <img src="Inicio/unidad 4.jpg" alt="Imagen 4">
+      <div class="content">
+        <p>Unidad 4</p>
+      </div>
+    </div>
+    <div class="box" onclick="window.location.href = 'Practicas.html';">
+      <img src="Inicio/a.jpg" alt="Imagen 5">
+      <div class="content">
+        <p>Prácticas</p>
+      </div>
+    </div>
+    <div class="box" onclick="window.location.href = 'tareas.html';">
+      <img src="Inicio/tareas.jpg" alt="Imagen 5">
+      <div class="content">
+        <p>Tareas</p>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <h6>&copy; <span id="currentYear"></span> Ricardo Sánchez Fraustro</h6>
+</footer>
+ <script>
+    // Configurar el año actual en el pie de página
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+  </script>
+</html>
