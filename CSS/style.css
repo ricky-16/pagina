@@ -11,7 +11,7 @@ footer {
   background-color: #00000045;
   padding: 1rem;
   text-align: center;
-    color: rgb(255, 255, 255); /* Color del texto para el pie de página */
+  color: rgb(255, 255, 255); /* Color del texto para el pie de página */
 }
 a {
   color: white;
