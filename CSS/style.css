@@ -34,6 +34,14 @@ header h1 {
   margin: 0;
 }
 
+.justify {
+  margin: auto;
+  width: 100%;
+  text-align: justify;
+  align-items: center;
+  font-family: "Arial", sans-serif; /* Change font to Arial */
+  text-decoration: underline; /* Add underline */
+}
 
 
 .center {
