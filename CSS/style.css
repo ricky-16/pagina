@@ -116,15 +116,25 @@ header {
   align-items: center;
 }
 
+.box {
+    margin: 5px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+
 .container {
   display: flex;
   justify-content: left;
   align-items: center; /* Añadido para centrar verticalmente los elementos */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no hay espacio suficiente */
-  margin-top: 150px;
+  
   padding-bottom: 20px;
-  display: flex;
   color: #ffffff;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .box {
